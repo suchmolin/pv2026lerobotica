@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-lero-yellow: #fbd300;
+  --color-lero-red: #df251c;
+  --color-lero-blue: #1d5ea7;
+  --color-lero-green: #2ea54e;
+  --color-lero-navy: #0e3c61;
+  --color-lero-teal: #2b948f;
+  --color-lero-orange: #f88800;
+  --color-lero-sky: #86ced2;
+  --color-lero-pink: #f99c9c;
+  --color-lero-lavender: #c4b5e8;
+
+  --font-display: 'Fredoka', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Compensa el navbar sticky al saltar a #inicio, #programas, etc. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 7rem;
+    }
+  }
+
+  section[id] {
+    scroll-margin-top: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    section[id] {
+      scroll-margin-top: 1rem;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-display);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
