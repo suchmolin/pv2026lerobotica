@@ -1,6 +1,8 @@
 import LegSection from './LegSection'
 
 const SECTION_BG = '#ffffff'
+const WHATSAPP_URL =
+  'https://wa.me/584125652213?text=Hola%2C%20quiero%20mas%20informacion%20del%20Plan%20Vacacional%20de%20LeRobotica'
 
 export default function ContactBanner() {
   return (
@@ -12,7 +14,7 @@ export default function ContactBanner() {
     >
       {/* Móvil: info arriba + imagen abajo */}
       <div className="flex flex-col sm:hidden">
-        <div className="relative z-30 mx-auto w-full px-3 py-6">
+        <div className="relative z-30 mx-auto w-full px-3 pt-2 pb-5">
           <div className="mx-auto flex w-full max-w-[20rem] flex-col items-center gap-1 min-[400px]:max-w-[24rem]">
             <div className="flex max-w-full flex-wrap items-center justify-center gap-1.5">
               <div className="inline-flex items-center justify-center rounded-xl bg-[#33aabb] px-5 py-1 text-2xl font-black leading-none tracking-wide text-white min-[400px]:px-6 min-[400px]:text-3xl">
@@ -30,7 +32,9 @@ export default function ContactBanner() {
             </div>
 
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="mt-2 inline-flex items-center justify-center rounded-xl bg-[#f88800] px-7 py-2.5 text-base font-black text-white shadow-lg transition hover:brightness-110 min-[400px]:px-8 min-[400px]:text-lg"
             >
               INSCRÍBETE AHORA
@@ -71,7 +75,9 @@ export default function ContactBanner() {
             </div>
 
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="mx-auto mt-3 flex w-fit items-center justify-center rounded-xl bg-[#f88800] px-7 py-2.5 text-base font-black text-white shadow-lg transition hover:brightness-110 min-[1200px]:mt-4 min-[1200px]:px-10 min-[1200px]:py-3 min-[1200px]:text-2xl"
             >
               INSCRÍBETE AHORA

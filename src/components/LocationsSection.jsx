@@ -1,5 +1,8 @@
 import LegSection from './LegSection'
 
+const WHATSAPP_URL =
+  'https://wa.me/584125652213?text=Hola%2C%20quiero%20mas%20informacion%20del%20Plan%20Vacacional%20de%20LeRobotica'
+
 const locations = [
   {
     title: 'CCCT',
@@ -52,7 +55,9 @@ function LocationCard({ title, address, image, color, buttonBg, className = '' }
           </p>
         </div>
         <a
-          href="#contacto"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noreferrer"
           className={`inline-flex items-center justify-center rounded-full px-8 py-1 font-display text-sm font-black uppercase tracking-wider text-white transition sm:px-10 sm:py-1.5 ${buttonBg}`}
         >
           INFO

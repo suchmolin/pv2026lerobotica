@@ -1,6 +1,8 @@
 import LegSection from './LegSection'
 
 const HEADER_BG = '#86ced2'
+const WHATSAPP_URL =
+  'https://wa.me/584125652213?text=Hola%2C%20quiero%20mas%20informacion%20del%20Plan%20Vacacional%20de%20LeRobotica'
 
 export default function Header() {
   return (
@@ -31,7 +33,9 @@ export default function Header() {
             </p>
 
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="mt-4 inline-flex items-center justify-center rounded-xl bg-lero-orange px-6 py-3 font-display text-base font-black text-white shadow-lg transition hover:brightness-110"
             >
               INSCRÍBETE AHORA
@@ -67,7 +71,9 @@ export default function Header() {
             </p>
 
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="mt-5 inline-flex items-center justify-center rounded-xl bg-lero-orange px-5 py-2 font-display text-sm font-black text-white shadow-lg transition hover:brightness-110 min-[1200px]:px-8 min-[1200px]:py-2.5 min-[1200px]:text-xl"
             >
               INSCRÍBETE AHORA

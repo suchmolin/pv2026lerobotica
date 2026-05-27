@@ -38,7 +38,7 @@ function FeatureCard({ icon, label, bg, className = '', compact, stacked = false
     <article
       className={`flex h-full rounded-2xl px-2 py-3 sm:px-3 sm:py-4 ${bg} ${
         stacked
-          ? 'min-h-[7.5rem] flex-col items-center justify-center gap-2 text-center'
+          ? 'min-h-[6.6rem] max-[359px]:min-h-[6.1rem] flex-col items-center justify-center gap-1.5 max-[359px]:gap-1 text-center'
           : 'min-h-[5.5rem] w-full flex-row items-center gap-2.5 sm:gap-3'
       } ${className}`}
     >
@@ -47,7 +47,7 @@ function FeatureCard({ icon, label, bg, className = '', compact, stacked = false
         alt=""
         className={`shrink-0 object-contain ${
           stacked
-            ? 'h-10 w-10'
+            ? 'h-9 w-9 max-[359px]:h-8 max-[359px]:w-8'
             : 'h-10 w-10 sm:h-12 sm:w-12 min-[985px]:h-14 min-[985px]:w-14'
         }`}
         aria-hidden="true"
@@ -55,7 +55,7 @@ function FeatureCard({ icon, label, bg, className = '', compact, stacked = false
       <p
         className={`min-w-0 font-extrabold uppercase leading-tight text-white ${
           stacked
-            ? `text-center text-[0.6rem] leading-snug ${compact ? '' : ''}`
+            ? `text-center text-[0.56rem] leading-snug max-[359px]:text-[0.5rem] ${compact ? '' : ''}`
             : `text-left ${
                 compact
                   ? 'text-[0.625rem] sm:text-xs'

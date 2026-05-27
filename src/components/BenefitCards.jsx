@@ -112,7 +112,7 @@ function BenefitCard({ icon, bg, label, compact, dense, className = '' }) {
 
 export default function BenefitCards() {
   return (
-    <LegSection bgColor="#ffffff" legOpacity={0.12} className="relative z-10 pt-2 pb-16 sm:pt-4 sm:pb-20 min-[1300px]:pb-24 min-[1420px]:pb-28 min-[1530px]:pb-32 lg:pt-6">
+    <LegSection bgColor="#ffffff" legOpacity={0.12} className="relative z-10 pt-8 pb-10 sm:pt-4 sm:pb-20 min-[1300px]:pb-24 min-[1420px]:pb-28 min-[1530px]:pb-32 lg:pt-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid w-full max-w-[21rem] grid-cols-6 gap-2 min-[400px]:max-w-[23rem] sm:max-w-3xl sm:gap-3 min-[1200px]:max-w-none min-[1200px]:grid-cols-5 min-[1200px]:gap-4">
           {items.map((item, index) => (

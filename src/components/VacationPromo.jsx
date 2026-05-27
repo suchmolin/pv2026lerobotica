@@ -2,6 +2,8 @@ import LegSection from './LegSection'
 
 const SECTION_BG = '#ceeae8'
 const LESTEAM_COLORS = ['#1a4dc5', '#33aab8', '#4ac109', '#f59707', '#f79300', '#7624b3', '#f3d000']
+const WHATSAPP_URL =
+  'https://wa.me/584125652213?text=Hola%2C%20quiero%20mas%20informacion%20del%20Plan%20Vacacional%20de%20LeRobotica'
 
 /** Altura franja: 65% en 1300px+; un poco más baja en pantallas menores */
 const stripHeight =
@@ -13,7 +15,7 @@ const stripHeight =
 const desktopScale =
   'origin-top-left scale-[0.92] min-[1300px]:scale-[1] min-[1420px]:scale-[1.05] min-[1530px]:scale-[1.2]'
 
-const stackedScale = 'origin-top scale-[1.08]'
+const stackedScale = 'origin-top scale-[1.02] min-[360px]:scale-[1.08]'
 
 function LesteamWord() {
   return (
@@ -30,11 +32,11 @@ function LesteamWord() {
 function PromoContent({ desktop = false, scaleClass = '' }) {
   const headlineSize = desktop
     ? 'text-5xl'
-    : 'text-3xl sm:text-4xl lg:text-5xl'
-  const sublineSize = desktop ? 'text-lg' : 'text-sm sm:text-base lg:text-lg'
-  const pillTextSize = desktop ? 'text-4xl' : 'text-2xl sm:text-3xl lg:text-4xl'
-  const subtitleSize = desktop ? 'text-4xl' : 'text-2xl sm:text-3xl lg:text-4xl'
-  const ctaSize = desktop ? 'text-2xl' : 'text-lg sm:text-xl lg:text-2xl'
+    : 'text-3xl max-[359px]:text-[1.55rem] sm:text-4xl lg:text-5xl'
+  const sublineSize = desktop ? 'text-lg' : 'text-sm max-[359px]:text-xs sm:text-base lg:text-lg'
+  const pillTextSize = desktop ? 'text-4xl' : 'text-2xl max-[359px]:text-xl sm:text-3xl lg:text-4xl'
+  const subtitleSize = desktop ? 'text-4xl' : 'text-2xl max-[359px]:text-xl sm:text-3xl lg:text-4xl'
+  const ctaSize = desktop ? 'text-2xl' : 'text-lg max-[359px]:text-base sm:text-xl lg:text-2xl'
   const pillPad = desktop ? 'px-8 py-2.5' : 'px-5 py-2 sm:px-6 sm:py-2.5 lg:px-8'
   const ctaPad = desktop ? 'px-10 py-3' : 'px-8 py-2.5 sm:px-10 sm:py-3'
   const mlPlan = desktop ? 'ml-5' : ''
@@ -47,12 +49,12 @@ function PromoContent({ desktop = false, scaleClass = '' }) {
     >
       <div className={`flex flex-col leading-[0.88] ${desktop ? '' : 'items-center'}`}>
         <p
-          className={`text-nowrap font-sans font-black uppercase text-[#33aabc] ${headlineSize}`}
+          className={`whitespace-nowrap font-sans font-black uppercase text-[#33aabc] max-[359px]:whitespace-normal ${headlineSize}`}
         >
           ESTAS VACACIONES
         </p>
         <p
-          className={`text-nowrap font-sans font-black uppercase text-[#0e3c61] ${headlineSize}`}
+          className={`whitespace-nowrap font-sans font-black uppercase text-[#0e3c61] max-[359px]:whitespace-normal ${headlineSize}`}
         >
           SON DIFERENTES
         </p>
@@ -66,17 +68,21 @@ function PromoContent({ desktop = false, scaleClass = '' }) {
       <div
         className={`mt-2 inline-flex items-center self-center rounded-xl bg-[#33aabb] ${desktop ? 'mt-2.5 self-start' : ''} ${pillPad} ${mlPlan}`}
       >
-        <span className={`text-nowrap font-sans font-black uppercase text-white ${pillTextSize}`}>
+        <span
+          className={`whitespace-nowrap text-center font-sans font-black uppercase text-white max-[359px]:whitespace-normal ${pillTextSize}`}
+        >
           PLAN VACACIONAL
         </span>
       </div>
       <p
-        className={`mt-2 text-nowrap self-center font-sans font-black uppercase text-[#0e3c61] ${desktop ? 'mt-2.5 self-start' : ''} ${subtitleSize} ${mlAventura}`}
+        className={`mt-2 self-center whitespace-nowrap text-center font-sans font-black uppercase text-[#0e3c61] max-[359px]:whitespace-normal ${desktop ? 'mt-2.5 self-start' : ''} ${subtitleSize} ${mlAventura}`}
       >
         AVENTURA LEGO 2026
       </p>
       <a
-        href="#contacto"
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noreferrer"
         className={`mt-3 inline-flex items-center justify-center self-center rounded-xl bg-[#fabb27] font-sans font-black uppercase text-white shadow-md transition hover:brightness-110 ${desktop ? 'mt-3.5 self-start' : ''} ${ctaPad} ${ctaSize} ${mlCta}`}
       >
         INSCRÍBETE AHORA
@@ -94,7 +100,7 @@ export default function VacationPromo() {
     >
       {/* ≤1099px: texto arriba + imagen abajo */}
       <div className="relative flex flex-col min-[1100px]:hidden">
-        <div className="relative z-10 mx-auto flex w-full justify-center px-4 pt-2 pb-8">
+        <div className="relative z-10 mx-auto flex w-full justify-center px-4 pt-2 pb-8 max-[359px]:px-3">
           <PromoContent scaleClass={stackedScale} />
         </div>
         <div className="relative z-0 leading-none">

@@ -1,6 +1,8 @@
 import LegSection from './LegSection'
 
 const SECTION_BG = '#fdeed7'
+const WHATSAPP_URL =
+  'https://wa.me/584125652213?text=Hola%2C%20quiero%20mas%20informacion%20del%20Plan%20Vacacional%20de%20LeRobotica'
 
 const stages = [
   {
@@ -55,7 +57,7 @@ function StageCard({ title, ages, image, paragraphs, cardBg, titleColor, buttonB
         <img
           src={image}
           alt=""
-          className="-ml-10 h-32 w-[calc(100%+2rem)] max-w-none rounded-2xl object-cover object-center sm:-ml-12 sm:h-36 sm:w-[calc(100%+2.25rem)] sm:rounded-3xl lg:-ml-14 lg:h-40 lg:w-[calc(100%+2.5rem)] xl:h-44"
+          className="-ml-6 h-32 w-[calc(100%+1.2rem)] max-w-none rounded-2xl object-cover object-center min-[400px]:-ml-8 min-[400px]:w-[calc(100%+1.6rem)] sm:-ml-12 sm:h-36 sm:w-[calc(100%+2.25rem)] sm:rounded-3xl lg:-ml-14 lg:h-40 lg:w-[calc(100%+2.5rem)] xl:h-44"
         />
       </div>
 
@@ -81,7 +83,9 @@ function StageCard({ title, ages, image, paragraphs, cardBg, titleColor, buttonB
       </div>
 
       <a
-        href="#contacto"
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noreferrer"
         className={`absolute -bottom-4 left-1/2 inline-flex -translate-x-1/2 items-center justify-center rounded-xl px-8 py-1.5 font-display text-sm font-black uppercase tracking-wide text-white shadow-md transition hover:brightness-110 sm:px-10 sm:text-base lg:px-8 lg:py-1.5 lg:text-sm xl:px-10 xl:py-2 xl:text-base 2xl:text-lg ${buttonBg}`}
       >
         INSCRIBIR
